@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fake Lead Generation — Sample Form · ActiveProspect</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='12' cy='16' r='9' fill='%230B1F3A'/%3E%3Ccircle cx='20' cy='16' r='9' fill='%232F6FED' fill-opacity='0.85'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --navy-2:#132A4D;
+    --accent:#2F6FED;
+    --accent-2:#17B6A7;
+    --bg:#F5F7FA;
+    --card:#FFFFFF;
+    --border:#E3E8EF;
+    --text:#1B2430;
+    --muted:#5B6472;
+    --danger:#D64545;
+    --success:#1E9E6B;
+    --radius:10px;
+    --shadow:0 1px 2px rgba(16,24,40,.04), 0 8px 24px rgba(16,24,40,.06);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:.2px;
+  }
+  .brand .mark{
+    width:26px;height:18px;position:relative;flex:0 0 auto;
+  }
+  .brand .mark span{
+    position:absolute;top:0;width:18px;height:18px;border-radius:50%;
+  }
+  .brand .mark span:first-child{left:0;background:#fff;}
+  .brand .mark span:last-child{left:8px;background:var(--accent);opacity:.9;}
+  .env-badge{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.28);
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.3px;
+    text-transform:uppercase;
+    padding:5px 10px;
+    border-radius:999px;
+  }
+  main{
+    max-width:640px;
+    margin:36px auto 64px;
+    padding:0 20px;
+  }
+  .intro{
+    margin-bottom:20px;
+  }
+  .intro h1{
+    font-size:22px;
+    margin:0 0 6px;
+    color:var(--navy);
+  }
+  .intro p{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.5;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:28px;
+  }
+  .field{
+    margin-bottom:18px;
+  }
+  .field label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:var(--navy-2);
+    margin-bottom:6px;
+  }
+  .field .req{color:var(--danger);}
+  .row2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  input[type=text], input[type=email], input[type=tel], select{
+    width:100%;
+    padding:10px 12px;
+    font-size:14px;
+    font-family:inherit;
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:#fff;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  input:focus, select:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(47,111,237,.15);
+  }
+  .consent{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    background:#F7FAFF;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:12px 14px;
+    margin-bottom:20px;
+  }
+  .consent input{margin-top:3px;flex:0 0 auto;}
+  .consent p{
+    margin:0;
+    font-size:12.5px;
+    line-height:1.5;
+    color:var(--muted);
+  }
+  button[type=submit]{
+    width:100%;
+    padding:12px 16px;
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    background:var(--accent);
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:background .15s, transform .05s;
+  }
+  button[type=submit]:hover{background:#2559C7;}
+  button[type=submit]:active{transform:translateY(1px);}
+  button[type=submit]:disabled{background:#9DB4D6;cursor:not-allowed;}
+  .cert-status{
+    margin-top:18px;
+    padding:12px 14px;
+    border-radius:8px;
+    font-size:12.5px;
+    border:1px solid var(--border);
+    background:#FAFBFC;
+    color:var(--muted);
+    word-break:break-all;
+  }
+  .cert-status.pending{border-color:#E9C46A;background:#FFF9EC;color:#8A6100;}
+  .cert-status.ready{border-color:var(--success);background:#EFFBF5;color:#136B49;}
+  .cert-status a{color:var(--accent-2);font-weight:600;}
+  .dot{
+    display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:#E9C46A;margin-right:6px;
+    animation:pulse 1.4s infinite;
+  }
+  .cert-status.ready .dot{background:var(--success);animation:none;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .result{
+    display:none;
+    margin-top:20px;
+    padding:16px 18px;
+    border-radius:8px;
+    border:1px solid var(--border);
+    background:#F7FAFF;
+    font-size:13px;
+  }
+  .result.show{display:block;}
+  .result h2{font-size:14px;margin:0 0 8px;color:var(--navy);}
+  .result dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:6px 10px;}
+  .result dt{color:var(--muted);}
+  .result dd{margin:0;word-break:break-all;}
+  .result .note{margin-top:10px;color:var(--muted);font-size:12px;}
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:12px;
+    padding:0 20px 40px;
+  }
+  footer code{background:#EEF1F5;padding:1px 5px;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="mark"><span></span><span></span></span>
+    ActiveProspect
+  </div>
+  <span class="env-badge">Sandbox · Fake Lead Generation</span>
+</header>
+
+<main>
+  <div class="intro">
+    <h1>Request more information</h1>
+    <p>Sample lead capture form used to test TrustedForm certificate generation for the Fake&nbsp;Lead&nbsp;Generation project. Submissions here use synthetic data only and should point at the ActiveProspect <strong>staging</strong> account, never production.</p>
+  </div>
+
+  <div class="card">
+    <form id="leadForm" novalidate data-tf-element-role="offer">
+      <div class="row2">
+        <div class="field">
+          <label for="firstName">First name <span class="req">*</span></label>
+          <input type="text" id="firstName" name="first_name" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="lastName">Last name <span class="req">*</span></label>
+          <input type="text" id="lastName" name="last_name" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <option value="">Select…</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+            <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+            <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+            <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+            <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+            <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+            <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+            <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+            <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+            <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+            <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+            <option>WI</option><option>WY</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="vertical">Vertical</label>
+        <select id="vertical" name="vertical">
+          <option value="home_services">Home Services</option>
+          <option value="insurance">Insurance</option>
+          <option value="solar">Solar</option>
+          <option value="education">Education</option>
+          <option value="financial_services">Financial Services</option>
+        </select>
+      </div>
+
+      <label class="consent" for="consent" data-tf-element-role="consent-language">
+        <input type="checkbox" id="consent" name="consent" required data-tf-element-role="consent-opt-in">
+        <p>
+          By clicking "Request Information" and submitting this form, I provide my express written consent to be
+          contacted by ActiveProspect and its partners at the phone number and email provided, including by
+          automated telephone dialing systems, pre-recorded/artificial voice messages, and text (SMS) message, for
+          marketing purposes. I understand consent is not required to make a purchase, message/data rates may
+          apply, and I can revoke consent at any time. This is a sandbox test form — no real marketing outreach
+          occurs.
+        </p>
+      </label>
+
+      <input type="hidden" name="xxTrustedFormCertUrl" value="">
+
+      <button type="submit" id="submitBtn" data-tf-element-role="submit">Request Information</button>
+
+      <div class="cert-status pending" id="certStatus">
+        <span class="dot"></span><span id="certStatusText">Waiting on TrustedForm certificate…</span>
+      </div>
+    </form>
+
+    <div class="result" id="result">
+      <h2>Submitted (test only — nothing was sent anywhere real)</h2>
+      <dl id="resultFields"></dl>
+      <p class="note" id="resultNote"></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Fake Lead Generation · internal demo asset · ActiveProspect staging environment only.
+  Repo target: <code>fake-lead-generation</code>
+</footer>
+
+<script>
+  // ---- Config -------------------------------------------------------------
+  // Set this once a LeadConduit "Source" is created in the staging account for
+  // this project (open item from the 2026-08-07 meeting notes). Left blank for
+  // now — the form still works end-to-end and shows the generated cert URL
+  // locally so you can confirm certification is working before wiring delivery.
+  var LEAD_CONDUIT_SOURCE_URL = ""; // e.g. "https://app.staging.activeprospect.com/..."
+
+  // Flip to true only for throwaway local testing of THIS page's JS — it does
+  // NOT control TrustedForm's own sandbox flag (that's set via the certify.js
+  // "sandbox" var below, left commented out so real certificates get issued).
+  var DEBUG = false;
+
+  // ---- TrustedForm hidden-field watcher -------------------------------------
+  (function () {
+    var statusBox = document.getElementById('certStatus');
+    var statusText = document.getElementById('certStatusText');
+    var hiddenField = document.querySelector('input[name="xxTrustedFormCertUrl"]');
+
+    function checkCert() {
+      var url = hiddenField.value;
+      if (url) {
+        statusBox.classList.remove('pending');
+        statusBox.classList.add('ready');
+        statusText.innerHTML = 'Certificate generated: <a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+        return true;
+      }
+      return false;
+    }
+
+    var attempts = 0;
+    var poll = setInterval(function () {
+      attempts++;
+      if (checkCert() || attempts > 40) { // ~20s timeout
+        clearInterval(poll);
+        if (attempts > 40 && !hiddenField.value) {
+          statusText.textContent = 'No certificate detected yet — confirm the certify.js script loaded (check console) and that this page is served over HTTP(S), not file://.';
+        }
+      }
+    }, 500);
+  })();
+
+  // ---- Submit handling ------------------------------------------------------
+  document.getElementById('leadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target;
+    var certUrl = document.querySelector('input[name="xxTrustedFormCertUrl"]').value;
+
+    var data = {
+      first_name: form.first_name.value,
+      last_name: form.last_name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      state: form.state.value,
+      vertical: form.vertical.value,
+      xxTrustedFormCertUrl: certUrl
+    };
+
+    var resultBox = document.getElementById('result');
+    var fieldsBox = document.getElementById('resultFields');
+    var noteBox = document.getElementById('resultNote');
+    fieldsBox.innerHTML = Object.keys(data).map(function (k) {
+      return '<dt>' + k + '</dt><dd>' + (data[k] || '<em>(empty)</em>') + '</dd>';
+    }).join('');
+
+    if (LEAD_CONDUIT_SOURCE_URL) {
+      noteBox.textContent = 'Posting to configured LeadConduit source…';
+      fetch(LEAD_CONDUIT_SOURCE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        noteBox.textContent = 'Posted to LeadConduit — response status ' + res.status + '.';
+      }).catch(function (err) {
+        noteBox.textContent = 'LeadConduit post failed: ' + err.message;
+      });
+    } else {
+      noteBox.textContent = 'LEAD_CONDUIT_SOURCE_URL is not set yet, so this only ran locally — set it in the script once a Source exists in the staging account.';
+    }
+
+    resultBox.classList.add('show');
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+
+<!-- TrustedForm -->
+<script type="text/javascript">
+  (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript';
+    tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
+</script>
+<noscript>
+  <img src='https://api.trustedform.com/ns.gif' />
+</noscript>
+<!-- End TrustedForm -->
+</body>
+</html>
