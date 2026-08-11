@@ -310,11 +310,9 @@
 
 <script>
   // ---- Config -------------------------------------------------------------
-  // Set this once a LeadConduit "Source" is created in the staging account for
-  // this project (open item from the 2026-08-07 meeting notes). Left blank for
-  // now — the form still works end-to-end and shows the generated cert URL
-  // locally so you can confirm certification is working before wiring delivery.
-  var LEAD_CONDUIT_SOURCE_URL = ""; // e.g. "https://app.staging.activeprospect.com/..."
+  // LeadConduit staging Source submit URL, shared by Steve in Slack (10 Aug,
+  // 3:17 AM) — flow 6a734b0938f1696a8356abff / source 61e991d79c98072793508cb2.
+  var LEAD_CONDUIT_SOURCE_URL = "https://app.leadconduit-staging.com/flows/6a734b0938f1696a8356abff/sources/61e991d79c98072793508cb2/submit";
 
   // Flip to true only for throwaway local testing of THIS page's JS — it does
   // NOT control TrustedForm's own sandbox flag (that's set via the certify.js
@@ -375,10 +373,14 @@
 
     if (LEAD_CONDUIT_SOURCE_URL) {
       noteBox.textContent = 'Posting to configured LeadConduit source…';
+      // application/x-www-form-urlencoded is a CORS "simple request" (no
+      // preflight); application/json would trigger a preflight that the
+      // LeadConduit submit endpoint will likely reject.
+      var formBody = new URLSearchParams(data);
       fetch(LEAD_CONDUIT_SOURCE_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody.toString()
       }).then(function (res) {
         noteBox.textContent = 'Posted to LeadConduit — response status ' + res.status + '.';
       }).catch(function (err) {
