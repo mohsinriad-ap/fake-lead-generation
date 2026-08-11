@@ -4,23 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Fake Lead Generation — Sample Form · ActiveProspect</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='12' cy='16' r='9' fill='%230B1F3A'/%3E%3Ccircle cx='20' cy='16' r='9' fill='%232F6FED' fill-opacity='0.85'/%3E%3C/svg%3E">
+<!--
+  INTERNAL — synthetic demo asset for the "Fake Lead Generation" project (ActiveProspect).
+  Repo: fake-lead-generation. Delivery target: LeadConduit staging
+  (flow 6a734b0938f1696a8356abff / source 61e991d79c98072793508cb2).
+  "Summit Gutter Solutions" is a fictional brand used to make certificate
+  replays look like a real publisher site. All submissions are synthetic
+  test data — do not enter real personal information.
+-->
+<title>Summit Gutter Solutions — Free Gutter Inspection</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231F5D50'/%3E%3Cpath d='M16 6c4 6 6 9 6 12a6 6 0 11-12 0c0-3 2-6 6-12z' fill='%23C98A2C'/%3E%3C/svg%3E">
 <style>
   :root{
-    --navy:#0B1F3A;
-    --navy-2:#132A4D;
-    --accent:#2F6FED;
-    --accent-2:#17B6A7;
-    --bg:#F5F7FA;
+    --forest:#1F5D50;
+    --forest-2:#14453B;
+    --gold:#C98A2C;
+    --gold-2:#B27A22;
+    --bg:#F6F5F1;
     --card:#FFFFFF;
-    --border:#E3E8EF;
-    --text:#1B2430;
-    --muted:#5B6472;
-    --danger:#D64545;
+    --border:#E4E1D8;
+    --text:#232821;
+    --muted:#5B6259;
+    --danger:#C1442B;
     --success:#1E9E6B;
     --radius:10px;
-    --shadow:0 1px 2px rgba(16,24,40,.04), 0 8px 24px rgba(16,24,40,.06);
+    --shadow:0 1px 2px rgba(20,25,20,.05), 0 8px 24px rgba(20,25,20,.07);
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
   *{box-sizing:border-box;}
@@ -32,7 +40,7 @@
     -webkit-font-smoothing:antialiased;
   }
   header{
-    background:var(--navy);
+    background:linear-gradient(180deg, var(--forest), var(--forest-2));
     color:#fff;
     padding:16px 24px;
     display:flex;
@@ -49,43 +57,75 @@
     font-size:18px;
     letter-spacing:.2px;
   }
-  .brand .mark{
-    width:26px;height:18px;position:relative;flex:0 0 auto;
-  }
-  .brand .mark span{
-    position:absolute;top:0;width:18px;height:18px;border-radius:50%;
-  }
-  .brand .mark span:first-child{left:0;background:#fff;}
-  .brand .mark span:last-child{left:8px;background:var(--accent);opacity:.9;}
-  .env-badge{
+  .brand .mark{flex:0 0 auto;width:24px;height:24px;display:block;}
+  .phone-badge{
     background:rgba(255,255,255,.12);
     border:1px solid rgba(255,255,255,.28);
     color:#fff;
-    font-size:12px;
+    font-size:13px;
     font-weight:600;
-    letter-spacing:.3px;
-    text-transform:uppercase;
-    padding:5px 10px;
+    letter-spacing:.2px;
+    padding:6px 12px;
     border-radius:999px;
+    white-space:nowrap;
   }
   main{
     max-width:640px;
-    margin:36px auto 64px;
-    padding:0 20px;
+    margin:0 auto;
+    padding:0 20px 64px;
   }
-  .intro{
-    margin-bottom:20px;
+  .hero{
+    text-align:center;
+    padding:40px 0 28px;
   }
-  .intro h1{
-    font-size:22px;
-    margin:0 0 6px;
-    color:var(--navy);
+  .hero-badge{
+    display:inline-block;
+    background:#EAF2EE;
+    color:var(--forest);
+    border:1px solid #D3E4DC;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.3px;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:18px;
   }
-  .intro p{
-    margin:0;
+  .hero-art{margin:0 auto 18px;width:150px;}
+  .hero-art svg{display:block;width:100%;height:auto;}
+  .hero h1{
+    font-size:28px;
+    line-height:1.2;
+    margin:0 0 10px;
+    color:var(--forest-2);
+  }
+  .hero-sub{
+    margin:0 auto 20px;
+    max-width:480px;
     color:var(--muted);
-    font-size:14px;
-    line-height:1.5;
+    font-size:15px;
+    line-height:1.55;
+  }
+  .trust-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 18px;
+    justify-content:center;
+    font-size:13px;
+    color:var(--forest-2);
+    font-weight:600;
+  }
+  .trust-list li{display:flex;align-items:center;gap:6px;}
+  .trust-list li::before{
+    content:"";
+    width:14px;height:14px;flex:0 0 auto;
+    background:var(--gold);
+    -webkit-mask:radial-gradient(circle,#000 60%,transparent 61%);
+    mask:radial-gradient(circle,#000 60%,transparent 61%);
+    border-radius:50%;
   }
   .card{
     background:var(--card);
@@ -94,6 +134,16 @@
     box-shadow:var(--shadow);
     padding:28px;
   }
+  .card h2.form-title{
+    font-size:18px;
+    margin:0 0 4px;
+    color:var(--forest-2);
+  }
+  .card p.form-sub{
+    margin:0 0 20px;
+    color:var(--muted);
+    font-size:13.5px;
+  }
   .field{
     margin-bottom:18px;
   }
@@ -101,7 +151,7 @@
     display:block;
     font-size:13px;
     font-weight:600;
-    color:var(--navy-2);
+    color:var(--forest-2);
     margin-bottom:6px;
   }
   .field .req{color:var(--danger);}
@@ -123,14 +173,14 @@
   }
   input:focus, select:focus{
     outline:none;
-    border-color:var(--accent);
-    box-shadow:0 0 0 3px rgba(47,111,237,.15);
+    border-color:var(--forest);
+    box-shadow:0 0 0 3px rgba(31,93,80,.15);
   }
   .consent{
     display:flex;
     gap:10px;
     align-items:flex-start;
-    background:#F7FAFF;
+    background:#F7F8F3;
     border:1px solid var(--border);
     border-radius:8px;
     padding:12px 14px;
@@ -143,35 +193,19 @@
     line-height:1.5;
     color:var(--muted);
   }
-  button[type=submit]{
-    width:100%;
-    padding:12px 16px;
-    font-size:15px;
-    font-weight:700;
-    color:#fff;
-    background:var(--accent);
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    box-shadow:var(--shadow);
-    transition:background .15s, transform .05s;
-  }
-  button[type=submit]:hover{background:#2559C7;}
-  button[type=submit]:active{transform:translateY(1px);}
-  button[type=submit]:disabled{background:#9DB4D6;cursor:not-allowed;}
   .cert-status{
-    margin-top:18px;
+    margin-bottom:14px;
     padding:12px 14px;
     border-radius:8px;
     font-size:12.5px;
     border:1px solid var(--border);
-    background:#FAFBFC;
+    background:#FAFBF8;
     color:var(--muted);
     word-break:break-all;
   }
   .cert-status.pending{border-color:#E9C46A;background:#FFF9EC;color:#8A6100;}
   .cert-status.ready{border-color:var(--success);background:#EFFBF5;color:#136B49;}
-  .cert-status a{color:var(--accent-2);font-weight:600;}
+  .cert-status a{color:var(--forest);font-weight:600;}
   .dot{
     display:inline-block;width:7px;height:7px;border-radius:50%;
     background:#E9C46A;margin-right:6px;
@@ -179,47 +213,100 @@
   }
   .cert-status.ready .dot{background:var(--success);animation:none;}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  button[type=submit]{
+    width:100%;
+    padding:12px 16px;
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    background:var(--gold);
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:background .15s, transform .05s;
+  }
+  button[type=submit]:hover:not(:disabled){background:var(--gold-2);}
+  button[type=submit]:active:not(:disabled){transform:translateY(1px);}
+  button[type=submit]:disabled{background:#D9CDB4;cursor:not-allowed;}
   .result{
     display:none;
-    margin-top:20px;
-    padding:16px 18px;
-    border-radius:8px;
-    border:1px solid var(--border);
-    background:#F7FAFF;
-    font-size:13px;
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid var(--border);
   }
   .result.show{display:block;}
-  .result h2{font-size:14px;margin:0 0 8px;color:var(--navy);}
-  .result dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:6px 10px;}
+  .result-thanks h2{font-size:17px;margin:0 0 6px;color:var(--forest-2);}
+  .result-thanks p{margin:0 0 4px;color:var(--muted);font-size:13.5px;line-height:1.5;}
+  .result-debug{
+    margin-top:16px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:#FAFBF8;
+    padding:2px 14px;
+  }
+  .result-debug summary{
+    cursor:pointer;
+    padding:10px 0;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--forest-2);
+  }
+  .result-debug[open] summary{margin-bottom:4px;}
+  .result dl{margin:0 0 10px;display:grid;grid-template-columns:130px 1fr;gap:6px 10px;font-size:12.5px;}
   .result dt{color:var(--muted);}
   .result dd{margin:0;word-break:break-all;}
-  .result .note{margin-top:10px;color:var(--muted);font-size:12px;}
+  .result .note{margin:0 0 10px;color:var(--muted);font-size:12px;}
   footer{
     text-align:center;
     color:var(--muted);
     font-size:12px;
-    padding:0 20px 40px;
+    line-height:1.6;
+    padding:28px 20px 40px;
   }
-  footer code{background:#EEF1F5;padding:1px 5px;border-radius:4px;}
 </style>
 </head>
 <body>
 
 <header>
   <div class="brand">
-    <span class="mark"><span></span><span></span></span>
-    ActiveProspect
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="16" fill="#EAF2EE"/>
+      <path d="M16 6c4 6 6 9 6 12a6 6 0 11-12 0c0-3 2-6 6-12z" fill="#C98A2C"/>
+    </svg>
+    Summit Gutter Solutions
   </div>
-  <span class="env-badge">Sandbox · Fake Lead Generation</span>
+  <span class="phone-badge">Call (555) 018-2947</span>
 </header>
 
 <main>
-  <div class="intro">
-    <h1>Request more information</h1>
-    <p>Sample lead capture form used to test TrustedForm certificate generation for the Fake&nbsp;Lead&nbsp;Generation project. Submissions here use synthetic data only and should point at the ActiveProspect <strong>staging</strong> account, never production.</p>
-  </div>
+  <section class="hero">
+    <span class="hero-badge">Licensed &amp; Insured · Serving your area</span>
+    <div class="hero-art">
+      <svg viewBox="0 0 200 130" aria-hidden="true">
+        <polygon points="20,70 100,15 180,70" fill="#1F5D50"/>
+        <rect x="35" y="70" width="130" height="45" fill="#F6F5F1" stroke="#1F5D50" stroke-width="3"/>
+        <rect x="30" y="66" width="140" height="8" rx="2" fill="#C98A2C"/>
+        <rect x="150" y="74" width="7" height="42" fill="#B27A22"/>
+        <circle cx="153" cy="122" r="4" fill="#3E7DBF"/>
+        <circle cx="145" cy="128" r="3" fill="#3E7DBF" opacity=".7"/>
+        <rect x="70" y="85" width="24" height="30" fill="#14453B"/>
+        <rect x="115" y="88" width="18" height="18" fill="#DDE7E0" stroke="#1F5D50" stroke-width="2"/>
+      </svg>
+    </div>
+    <h1>Stop Guessing About Your Gutters</h1>
+    <p class="hero-sub">Get a free, no-obligation inspection from a local Summit specialist. We'll show you exactly what's clogging, sagging, or leaking — before it turns into a bigger repair.</p>
+    <ul class="trust-list">
+      <li>Licensed &amp; insured crews</li>
+      <li>No pressure, no obligation</li>
+      <li>Most inspections booked within 48 hours</li>
+    </ul>
+  </section>
 
   <div class="card">
+    <h2 class="form-title">Get Your Free Inspection</h2>
+    <p class="form-sub">Tell us a bit about your home and we'll have a specialist reach out to schedule your visit.</p>
+
     <form id="leadForm" novalidate data-tf-element-role="offer">
       <div class="row2">
         <div class="field">
@@ -264,48 +351,53 @@
       </div>
 
       <div class="field">
-        <label for="vertical">Vertical</label>
-        <select id="vertical" name="vertical">
-          <option value="home_services">Home Services</option>
-          <option value="insurance">Insurance</option>
-          <option value="solar">Solar</option>
-          <option value="education">Education</option>
-          <option value="financial_services">Financial Services</option>
+        <label for="gutterIssue">What's going on with your gutters?</label>
+        <select id="gutterIssue" name="gutter_issue">
+          <option value="not_sure">Not sure — just want an inspection</option>
+          <option value="clogging">Clogging or overflow</option>
+          <option value="leaking">Leaking or dripping</option>
+          <option value="sagging">Sagging or pulling away</option>
+          <option value="no_gutters">No gutters yet / considering install</option>
         </select>
       </div>
 
       <label class="consent" for="consent" data-tf-element-role="consent-language">
         <input type="checkbox" id="consent" name="consent" required data-tf-element-role="consent-opt-in">
         <p>
-          By clicking "Request Information" and submitting this form, I provide my express written consent to be
-          contacted by ActiveProspect and its partners at the phone number and email provided, including by
-          automated telephone dialing systems, pre-recorded/artificial voice messages, and text (SMS) message, for
-          marketing purposes. I understand consent is not required to make a purchase, message/data rates may
-          apply, and I can revoke consent at any time. This is a sandbox test form — no real marketing outreach
-          occurs.
+          By clicking "Get My Free Inspection," I agree to be contacted by Summit Gutter Solutions and its
+          service partners at the phone number and email above, including by automated telephone dialing systems,
+          pre-recorded/artificial voice messages, and text (SMS) message, to schedule my inspection or share
+          related offers. Consent is not required to make a purchase, message/data rates may apply, and I can
+          revoke consent at any time. I also agree to the Privacy Policy and Terms of Service.
         </p>
       </label>
 
       <input type="hidden" name="xxTrustedFormCertUrl" value="">
 
-      <button type="submit" id="submitBtn" data-tf-element-role="submit">Request Information</button>
-
       <div class="cert-status pending" id="certStatus">
-        <span class="dot"></span><span id="certStatusText">Waiting on TrustedForm certificate…</span>
+        <span class="dot"></span><span id="certStatusText">Securing your submission — generating a TrustedForm certificate…</span>
       </div>
+
+      <button type="submit" id="submitBtn" data-tf-element-role="submit" disabled>Get My Free Inspection</button>
     </form>
 
     <div class="result" id="result">
-      <h2>Submitted (test only — nothing was sent anywhere real)</h2>
-      <dl id="resultFields"></dl>
-      <p class="note" id="resultNote"></p>
+      <div class="result-thanks">
+        <h2 id="resultHeading">Thanks! Your free inspection request is in.</h2>
+        <p>A Summit Gutter Solutions specialist will reach out within one business day to schedule your visit.</p>
+      </div>
+      <details class="result-debug">
+        <summary>Submission details</summary>
+        <dl id="resultFields"></dl>
+        <p class="note" id="resultNote"></p>
+      </details>
     </div>
   </div>
 </main>
 
 <footer>
-  Fake Lead Generation · internal demo asset · ActiveProspect staging environment only.
-  Repo target: <code>fake-lead-generation</code>
+  © 2026 Summit Gutter Solutions. Licensed &amp; insured. Scheduling subject to availability in your area.<br>
+  This page is for informational purposes and does not guarantee service availability.
 </footer>
 
 <script>
@@ -315,14 +407,14 @@
   var LEAD_CONDUIT_SOURCE_URL = "https://app.leadconduit-staging.com/flows/6a734b0938f1696a8356abff/sources/61e991d79c98072793508cb2/submit";
 
   // Flip to true only for throwaway local testing of THIS page's JS — it does
-  // NOT control TrustedForm's own sandbox flag (that's set via the certify.js
-  // "sandbox" var below, left commented out so real certificates get issued).
+  // NOT control TrustedForm's own sandbox flag.
   var DEBUG = false;
 
   // ---- TrustedForm hidden-field watcher -------------------------------------
   (function () {
     var statusBox = document.getElementById('certStatus');
     var statusText = document.getElementById('certStatusText');
+    var submitBtn = document.getElementById('submitBtn');
     var hiddenField = document.querySelector('input[name="xxTrustedFormCertUrl"]');
 
     function checkCert() {
@@ -331,6 +423,7 @@
         statusBox.classList.remove('pending');
         statusBox.classList.add('ready');
         statusText.innerHTML = 'Certificate generated: <a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+        submitBtn.disabled = false;
         return true;
       }
       return false;
@@ -342,7 +435,9 @@
       if (checkCert() || attempts > 40) { // ~20s timeout
         clearInterval(poll);
         if (attempts > 40 && !hiddenField.value) {
-          statusText.textContent = 'No certificate detected yet — confirm the certify.js script loaded (check console) and that this page is served over HTTP(S), not file://.';
+          statusText.textContent = 'No certificate detected yet — confirm the TrustedForm script loaded (check console) and that this page is served over HTTP(S), not file://.';
+          // Fail open after timeout so a slow/blocked script doesn't strand a real visitor.
+          submitBtn.disabled = false;
         }
       }
     }, 500);
@@ -360,13 +455,17 @@
       email: form.email.value,
       phone: form.phone.value,
       state: form.state.value,
-      vertical: form.vertical.value,
+      gutter_issue: form.gutter_issue.value,
       xxTrustedFormCertUrl: certUrl
     };
 
     var resultBox = document.getElementById('result');
+    var headingBox = document.getElementById('resultHeading');
     var fieldsBox = document.getElementById('resultFields');
     var noteBox = document.getElementById('resultNote');
+
+    headingBox.textContent = 'Thanks' + (data.first_name ? ', ' + data.first_name : '') + '! Your free inspection request is in.';
+
     fieldsBox.innerHTML = Object.keys(data).map(function (k) {
       return '<dt>' + k + '</dt><dd>' + (data[k] || '<em>(empty)</em>') + '</dd>';
     }).join('');
